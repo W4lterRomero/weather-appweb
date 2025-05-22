@@ -15,7 +15,7 @@ search.addEventListener('click', ()=>{
 
     // La llamada fetch ahora está fuera del if(city === '')
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`)
-        .then(response => response.json()) // Corregido: response.json()
+        .then(response => response.json()) 
         .then(json => {
             if(json.cod === '404'){
                 container.style.height = '400px';
